@@ -1,3 +1,4 @@
 __pycache_/__init__.cpython-36.pyc
 __pycache__/
 *.csv
+*.json
