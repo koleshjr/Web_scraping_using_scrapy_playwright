@@ -37,8 +37,12 @@ class OpenPositionsSpider(scrapy.Spider):
         
 
     async def parse(self, response):
-        for job in response.css('div[role="list"] div[role="listitem"]'):
+        for job in response.css(' div.list-group div.list-group-item'): 
             yield {
-                'title': job.css('a::text').get()
+                'title': job.css('a::text').get(),
+                'location': job.css('div[aria-describedby="header-location"]::text').get(),
+                'category': job.css('div[aria-describedby="header-category"]> span::text').get(),
+                'location': job.css('div[aria-describedby="header-postdate"]::text').get(),
+                
             }
         

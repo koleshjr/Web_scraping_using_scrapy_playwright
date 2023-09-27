@@ -7,3 +7,5 @@ add these to your settings.py for scrapy playwright to work
     }
 
     TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
+use the console_log to identify the css selector using document.querySelector
